@@ -1,0 +1,1126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <link rel="icon" type="image/x-icon" href="icon1.png" />
+    <title>Aayush Neupane — Sales Analyst • Excel • SQL • Power BI</title>
+    <meta
+      name="description"
+      content="Sales Analyst portfolio by Aayush Neupane — Excel, SQL, Python, Power BI dashboards with live market data and interactive slicers."
+    />
+
+    <!-- TailwindCSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Chart.js v4 -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+    <!-- AOS (scroll anims) -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+    <style>
+      :root {
+        --bg: #0b1220;
+        --surface: #0f1a2e;
+        --text: #e8edf5;
+        --muted: #a3b0c2;
+        --brand: #60a5fa;
+        --brand2: #a78bfa;
+        --brand3: #34d399;
+        --brand4: #f59e0b;
+        --accent: #f472b6;
+      }
+      html,
+      body {
+        background: radial-gradient(
+            1200px 720px at 10% 10%,
+            rgba(96, 165, 250, 0.12),
+            transparent
+          ),
+          radial-gradient(
+            900px 520px at 90% 20%,
+            rgba(167, 139, 250, 0.1),
+            transparent
+          ),
+          linear-gradient(180deg, #0b1220 0%, #0b1220 100%);
+        color: var(--text);
+        font-family: ui-sans-serif, system-ui, Inter;
+      }
+      .glass {
+        background: linear-gradient(
+          180deg,
+          rgba(255, 255, 255, 0.08),
+          rgba(255, 255, 255, 0.03)
+        );
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+      }
+      .card {
+        border-radius: 18px;
+      }
+      .chip {
+        background: rgba(96, 165, 250, 0.12);
+        border: 1px solid rgba(96, 165, 250, 0.25);
+        color: #bfdbfe;
+      }
+      .btn {
+        background: linear-gradient(90deg, #60a5fa, #34d399);
+        color: #0b1220;
+        font-weight: 700;
+      }
+      .kpi {
+        text-shadow: 0 0 22px rgba(96, 165, 250, 0.25);
+      }
+      .grid-fit {
+        grid-auto-rows: 1fr;
+      }
+      .tab {
+        cursor: pointer;
+      }
+      .badgelive {
+        background: rgba(34, 197, 94, 0.15);
+        border: 1px solid rgba(34, 197, 94, 0.35);
+        color: #a7f3d0;
+      }
+      a {
+        color: #93c5fd;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- NAV -->
+    <header class="sticky top-0 z-50 glass">
+      <div class="max-w-7xl mx-auto px-4 py-3 flex items-center gap-4">
+        <div class="flex items-center gap-3">
+          <div
+            class="w-9 h-9 rounded-xl bg-gradient-to-br from-blue-400 to-violet-400"
+          ></div>
+          <div class="font-semibold tracking-wide">Aayush Neupane</div>
+          <span class="hidden sm:inline-flex text-xs px-2 py-1 rounded chip"
+            >Sales Analyst</span
+          >
+        </div>
+        <nav class="ml-auto hidden md:flex gap-6 text-slate-300">
+          <a href="#dashboard" class="hover:text-white">Overview</a>
+          <a href="#skills" class="hover:text-white">Skills</a>
+          <a href="#experience" class="hover:text-white">Experience</a>
+          <a href="#projects" class="hover:text-white">Projects</a>
+          <a href="#markets" class="hover:text-white">Markets</a>
+          <a href="#nepse" class="hover:text-white">NEPSE</a>
+          <a href="#contact" class="hover:text-white">Contact</a>
+        </nav>
+        <a
+          href="mailto:neupane_aayush@outlook.com"
+          class="ml-auto md:ml-4 px-4 py-2 rounded-xl btn hover:opacity-95 transition"
+          >Hire Me</a
+        >
+      </div>
+    </header>
+
+    <!-- HERO -->
+    <section class="max-w-7xl mx-auto px-4 pt-10" data-aos="fade-up">
+      <div class="grid lg:grid-cols-[1.2fr_.8fr] gap-6">
+        <div class="card glass p-6">
+          <h1 class="text-3xl md:text-5xl font-extrabold text-blue-300">
+            Sales Analyst — Excel • SQL • Power BI • Python
+          </h1>
+          <p class="mt-3 text-slate-300 max-w-3xl">
+            I build actionable dashboards, forecasts and market insights that
+            grow revenue and sharpen decision-making.
+          </p>
+          <div class="mt-5 flex flex-wrap gap-2">
+            <span class="px-3 py-1 rounded chip">Excel</span>
+            <span class="px-3 py-1 rounded chip">Power BI</span>
+            <span class="px-3 py-1 rounded chip">SQL</span>
+            <span class="px-3 py-1 rounded chip">Python</span>
+            <span class="px-3 py-1 rounded chip">Linux</span>
+            <span class="px-3 py-1 rounded chip">Forecasting</span>
+            <span class="px-3 py-1 rounded chip">Stakeholder Reporting</span>
+          </div>
+        </div>
+        <div class="card glass p-6">
+          <div class="flex items-center justify-between">
+            <div class="text-slate-300">Contact</div>
+            <span class="text-xs px-2 py-1 rounded badgelive"
+              >Open to opportunities</span
+            >
+          </div>
+          <div class="mt-3 space-y-2 text-slate-200">
+            <div>
+              📧
+              <a href="mailto:neupane_aayush@outlook.com"
+                >neupane_aayush@outlook.com</a
+              >
+            </div>
+            <div>📍 Kathmandu, Nepal</div>
+          </div>
+          <div class="mt-6 grid grid-cols-2 gap-3 text-center">
+            <div class="glass card p-4">
+              <div class="text-xs text-slate-400">Years in Analytics</div>
+              <div id="kpiYears" class="text-2xl kpi font-extrabold">0</div>
+            </div>
+            <div class="glass card p-4">
+              <div class="text-xs text-slate-400">Stakeholders Served</div>
+              <div id="kpiStake" class="text-2xl kpi font-extrabold">0</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- OVERVIEW : KPIs + SLICERS + CHARTS -->
+    <section
+      id="dashboard"
+      class="max-w-7xl mx-auto px-4 mt-8"
+      data-aos="fade-up"
+    >
+      <!-- KPI Row -->
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+        <div class="card glass p-5">
+          <div class="text-slate-400 text-sm">Revenue Impact</div>
+          <div id="kpiRevenue" class="text-3xl font-extrabold kpi">NPR 0</div>
+          <div class="text-xs text-emerald-300 mt-1">▲ vs LY</div>
+        </div>
+        <div class="card glass p-5">
+          <div class="text-slate-400 text-sm">Forecast Accuracy</div>
+          <div id="kpiAcc" class="text-3xl font-extrabold kpi">0%</div>
+          <div class="text-xs text-emerald-300 mt-1">12-mo rolling</div>
+        </div>
+        <div class="card glass p-5">
+          <div class="text-slate-400 text-sm">Automation Savings</div>
+          <div id="kpiAuto" class="text-3xl font-extrabold kpi">0h/mo</div>
+          <div class="text-xs text-emerald-300 mt-1">process automation</div>
+        </div>
+        <div class="card glass p-5">
+          <div class="text-slate-400 text-sm">Top Region</div>
+          <div id="kpiTopRegion" class="text-3xl font-extrabold kpi">—</div>
+          <div class="text-xs text-emerald-300 mt-1">YTD share</div>
+        </div>
+      </div>
+
+      <!-- Slicers -->
+      <div class="mt-5 grid md:grid-cols-3 gap-4">
+        <div class="card glass p-4">
+          <label class="text-slate-400 text-xs">Month</label>
+          <select
+            id="slicerMonth"
+            class="mt-1 w-full bg-transparent border border-white/10 rounded-xl px-3 py-2"
+          >
+            <option value="All">All Months</option>
+            <option>Jan</option>
+            <option>Feb</option>
+            <option>Mar</option>
+            <option>Apr</option>
+            <option>May</option>
+            <option>Jun</option>
+            <option>Jul</option>
+            <option>Aug</option>
+            <option>Sep</option>
+            <option>Oct</option>
+            <option>Nov</option>
+            <option>Dec</option>
+          </select>
+        </div>
+        <div class="card glass p-4">
+          <label class="text-slate-400 text-xs">Region</label>
+          <select
+            id="slicerRegion"
+            class="mt-1 w-full bg-transparent border border-white/10 rounded-xl px-3 py-2"
+          >
+            <option value="All">All Regions</option>
+            <option>Europe</option>
+            <option>North America</option>
+            <option>Greater China</option>
+            <option>Latin America</option>
+            <option>Japan/South Korea</option>
+            <option>Others</option>
+          </select>
+        </div>
+        <div class="card glass p-4">
+          <label class="text-slate-400 text-xs">Segment</label>
+          <select
+            id="slicerSegment"
+            class="mt-1 w-full bg-transparent border border-white/10 rounded-xl px-3 py-2"
+          >
+            <option value="All">All Segments</option>
+            <option>Retail</option>
+            <option>B2B</option>
+            <option>SaaS</option>
+            <option>Cybersec</option>
+            <option>FMCG</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Charts Dense Grid -->
+      <div class="mt-5 grid lg:grid-cols-3 gap-4 grid-fit">
+        <div class="card glass p-5 lg:col-span-2">
+          <div class="flex items-center justify-between">
+            <h3 class="text-violet-300 font-semibold">
+              Revenue Trend (NPR) — Filtered
+            </h3>
+            <span class="text-xs text-slate-400" id="revFilterLabel"
+              >All Months • All Regions</span
+            >
+          </div>
+          <canvas id="chartRevenue" height="120"></canvas>
+        </div>
+
+        <div class="card glass p-5">
+          <h3 class="text-violet-300 font-semibold">Product Mix (share)</h3>
+          <canvas id="chartMix" height="120"></canvas>
+        </div>
+
+        <div class="card glass p-5">
+          <h3 class="text-violet-300 font-semibold">Regional Sales (share)</h3>
+          <canvas id="chartRegion" height="120"></canvas>
+          <p class="mt-2 text-xs text-slate-400">
+            Fallback based on Adidas AR-style region mix.
+          </p>
+        </div>
+
+        <div class="card glass p-5">
+          <h3 class="text-violet-300 font-semibold">Conversion Funnel</h3>
+          <canvas id="chartFunnel" height="120"></canvas>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section
+      id="skills"
+      class="max-w-7xl mx-auto px-4 mt-10"
+      data-aos="fade-up"
+    >
+      <div class="grid lg:grid-cols-2 gap-4">
+        <div class="card glass p-5">
+          <h3 class="text-violet-300 font-semibold">Skills Radar</h3>
+          <canvas id="chartSkillsRadar" height="160"></canvas>
+        </div>
+        <div class="card glass p-5">
+          <h3 class="text-violet-300 font-semibold">Skills Ranking</h3>
+          <canvas id="chartSkillsBar" height="160"></canvas>
+        </div>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE (Excel-style Gantt) -->
+    <section
+      id="experience"
+      class="max-w-7xl mx-auto px-4 mt-10"
+      data-aos="fade-up"
+    >
+      <div class="card glass p-5">
+        <div class="flex items-center justify-between">
+          <h3 class="text-violet-300 font-semibold">
+            Experience Timeline (Years)
+          </h3>
+          <span class="text-xs text-slate-400">2017 → Present</span>
+        </div>
+        <canvas id="chartGantt" height="170"></canvas>
+        <ul class="mt-3 grid sm:grid-cols-3 gap-2 text-slate-300 text-sm">
+          <li>2017–2019 — Hardware Engineer</li>
+          <li>2019–2020 — Network Engineer</li>
+          <li>2020–2021 — IT Support Engineer</li>
+          <li>2021–2022 — B2B Product Specialist | Analyst</li>
+          <li>2022–Present — Sales Analyst</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section
+      id="projects"
+      class="max-w-7xl mx-auto px-4 mt-10"
+      data-aos="fade-up"
+    >
+      <h3 class="text-2xl font-bold text-blue-300 mb-4 text-center">
+        Projects & Dashboards
+      </h3>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+        <div
+          class="card glass p-3 hover:-translate-y-1 hover:shadow-xl transition"
+        >
+          <img
+            class="rounded-xl"
+            src="https://images.unsplash.com/photo-1551281044-8f785ba67e45?q=80&w=1200&auto=format&fit=crop"
+            alt="Sales Dashboard"
+          />
+          <div class="mt-3 font-semibold">
+            Retail Sales Dashboard (Power BI)
+          </div>
+          <div class="text-xs text-slate-400">
+            DAX measures, drillthrough, time-intelligence
+          </div>
+        </div>
+        <div
+          class="card glass p-3 hover:-translate-y-1 hover:shadow-xl transition"
+        >
+          <img
+            class="rounded-xl"
+            src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1200&auto=format&fit=crop"
+            alt="Forecasting"
+          />
+          <div class="mt-3 font-semibold">Forecast Accuracy Tracker</div>
+          <div class="text-xs text-slate-400">
+            Excel + Python ETS, MAPE/MAE monitoring
+          </div>
+        </div>
+        <div
+          class="card glass p-3 hover:-translate-y-1 hover:shadow-xl transition"
+        >
+          <img
+            class="rounded-xl"
+            src="https://images.unsplash.com/photo-1556157382-97eda2d62296?q=80&w=1200&auto=format&fit=crop"
+            alt="SQL"
+          />
+          <div class="mt-3 font-semibold">SQL Revenue Cohorts</div>
+          <div class="text-xs text-slate-400">
+            Window funcs, cohort retention, RFM
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MARKETS (Live APIs) -->
+    <section
+      id="markets"
+      class="max-w-7xl mx-auto px-4 mt-10"
+      data-aos="fade-up"
+    >
+      <div class="grid lg:grid-cols-3 gap-4">
+        <div class="card glass p-5">
+          <div class="flex items-center justify-between">
+            <h3 class="text-violet-300 font-semibold">
+              Top 5 Crypto by Market Cap
+            </h3>
+            <span class="text-xs text-slate-400" id="capUpdated">—</span>
+          </div>
+          <canvas id="chartCryptoCap" height="140"></canvas>
+        </div>
+        <div class="card glass p-5">
+          <h3 class="text-violet-300 font-semibold">BTC — 7 Day Trend (USD)</h3>
+          <canvas id="chartBTC" height="140"></canvas>
+        </div>
+        <div class="card glass p-5">
+          <h3 class="text-violet-300 font-semibold">
+            Forex (USD → EUR/GBP/JPY)
+          </h3>
+          <canvas id="chartForex" height="140"></canvas>
+        </div>
+      </div>
+    </section>
+
+    <!-- NEPSE (Unofficial API with fallback) -->
+    <section
+      id="nepse"
+      class="max-w-7xl mx-auto px-4 mt-10 mb-16"
+      data-aos="fade-up"
+    >
+      <div class="card glass p-5">
+        <div class="flex flex-wrap items-center gap-2">
+          <h3 class="text-violet-300 font-semibold">
+            Top Opportunities — NEPSE
+          </h3>
+          <span class="text-xs px-2 py-1 rounded badgelive"
+            >Live (Unofficial)</span
+          >
+          <a
+            class="ml-auto text-sm underline"
+            href="https://www.nepalstock.com/"
+            target="_blank"
+            >Open NEPSE</a
+          >
+        </div>
+        <div class="mt-3 flex flex-wrap gap-2">
+          <button class="tab px-3 py-1 rounded-xl glass" data-tab="turnover">
+            Top Turnovers
+          </button>
+          <button class="tab px-3 py-1 rounded-xl glass" data-tab="gainers">
+            Top Gainers
+          </button>
+          <button class="tab px-3 py-1 rounded-xl glass" data-tab="losers">
+            Top Losers
+          </button>
+          <button class="tab px-3 py-1 rounded-xl glass" data-tab="brokers">
+            Top Brokers
+          </button>
+        </div>
+        <div
+          id="nepseList"
+          class="grid sm:grid-cols-2 lg:grid-cols-3 gap-2 mt-4"
+        ></div>
+        <p class="text-xs text-slate-500 mt-2">
+          If the API is blocked/rate-limited, realistic sample data appears
+          automatically.
+        </p>
+      </div>
+    </section>
+
+    <!-- Languages -->
+    <section class="px-6 my-10">
+      <h2 class="text-2xl mb-4">Languages</h2>
+      <div class="glass p-6 space-y-4">
+        <div>
+          <p class="text-sm mb-1">English - Professional</p>
+          <div class="w-full bg-gray-700 rounded-full h-3">
+            <div class="bg-blue-500 h-3 rounded-full" style="width: 95%"></div>
+          </div>
+        </div>
+        <div>
+          <p class="text-sm mb-1">Nepali - Native</p>
+          <div class="w-full bg-gray-700 rounded-full h-3">
+            <div
+              class="bg-green-500 h-3 rounded-full"
+              style="width: 100%"
+            ></div>
+          </div>
+        </div>
+        <div>
+          <p class="text-sm mb-1">Hindi - Professional</p>
+          <div class="w-full bg-gray-700 rounded-full h-3">
+            <div
+              class="bg-yellow-500 h-3 rounded-full"
+              style="width: 90%"
+            ></div>
+          </div>
+        </div>
+        <div>
+          <p class="text-sm mb-1">German - Professional</p>
+          <div class="w-full bg-gray-700 rounded-full h-3">
+            <div
+              class="bg-purple-500 h-3 rounded-full"
+              style="width: 85%"
+            ></div>
+          </div>
+        </div>
+        <div>
+          <p class="text-sm mb-1">Spanish - Conversational</p>
+          <div class="w-full bg-gray-700 rounded-full h-3">
+            <div class="bg-red-500 h-3 rounded-full" style="width: 60%"></div>
+          </div>
+        </div>
+        <div>
+          <p class="text-sm mb-1">French - Conversational</p>
+          <div class="w-full bg-gray-700 rounded-full h-3">
+            <div class="bg-pink-400 h-3 rounded-full" style="width: 55%"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section
+      id="contact"
+      class="max-w-7xl mx-auto px-4 pb-16"
+      data-aos="fade-up"
+    >
+      <div class="card glass p-6 text-center">
+        <h3 class="text-2xl font-bold text-blue-300">
+          Let’s build your next dashboard
+        </h3>
+        <a
+          href="mailto:neupane_aayush@outlook.com"
+          class="inline-flex items-center gap-2 mt-4 px-5 py-3 btn rounded-xl shadow hover:opacity-95"
+        >
+          📧 Email: neupane_aayush@outlook.com
+        </a>
+      </div>
+      <div class="text-center text-slate-500 text-sm mt-6">
+        © <span id="year"></span> Aayush Neupane • Excel • SQL • BI • Python
+      </div>
+    </section>
+
+    <!-- SCRIPTS -->
+    <script>
+      AOS.init({ duration: 700, once: true });
+
+      // ---------- KPI Animated Counters ----------
+      function animateNumber(
+        el,
+        end,
+        { prefix = "", suffix = "", dur = 1200 } = {}
+      ) {
+        const startTs = performance.now();
+        const start = 0;
+        const fmt = (v) =>
+          `${prefix}${Math.round(v).toLocaleString()}${suffix}`;
+        function tick(ts) {
+          const p = Math.min((ts - startTs) / dur, 1);
+          el.textContent = fmt(start + (end - start) * p);
+          if (p < 1) requestAnimationFrame(tick);
+        }
+        requestAnimationFrame(tick);
+      }
+      animateNumber(document.getElementById("kpiRevenue"), 280_000_000, {
+        prefix: "NPR ",
+      });
+      animateNumber(document.getElementById("kpiAcc"), 93, { suffix: "%" });
+      animateNumber(document.getElementById("kpiAuto"), 36, { suffix: "h/mo" });
+      animateNumber(document.getElementById("kpiYears"), 6, {});
+      animateNumber(document.getElementById("kpiStake"), 45, {});
+
+      // ---------- Sample Sales Fact (Month x Region x Segment) ----------
+      // (Acts like a tiny cube for slicers. Units in NPR millions)
+      const SALES = [
+        // month, region, segment, value
+        ["Jan", "Europe", "Retail", 18],
+        ["Jan", "North America", "Retail", 15],
+        ["Jan", "Greater China", "Retail", 12],
+        ["Jan", "Latin America", "Retail", 6],
+        ["Jan", "Japan/South Korea", "Retail", 4],
+        ["Jan", "Others", "Retail", 5],
+        ["Feb", "Europe", "Retail", 20],
+        ["Feb", "North America", "Retail", 16],
+        ["Feb", "Greater China", "Retail", 13],
+        ["Feb", "Latin America", "Retail", 7],
+        ["Feb", "Japan/South Korea", "Retail", 4],
+        ["Feb", "Others", "Retail", 5],
+        ["Mar", "Europe", "Retail", 22],
+        ["Mar", "North America", "Retail", 18],
+        ["Mar", "Greater China", "Retail", 14],
+        ["Mar", "Latin America", "Retail", 8],
+        ["Mar", "Japan/South Korea", "Retail", 5],
+        ["Mar", "Others", "Retail", 6],
+        ["Apr", "Europe", "Retail", 24],
+        ["Apr", "North America", "Retail", 20],
+        ["Apr", "Greater China", "Retail", 13],
+        ["Apr", "Latin America", "Retail", 9],
+        ["Apr", "Japan/South Korea", "Retail", 5],
+        ["Apr", "Others", "Retail", 6],
+        ["May", "Europe", "Retail", 26],
+        ["May", "North America", "Retail", 21],
+        ["May", "Greater China", "Retail", 15],
+        ["May", "Latin America", "Retail", 9],
+        ["May", "Japan/South Korea", "Retail", 6],
+        ["May", "Others", "Retail", 6],
+        ["Jun", "Europe", "Retail", 27],
+        ["Jun", "North America", "Retail", 22],
+        ["Jun", "Greater China", "Retail", 16],
+        ["Jun", "Latin America", "Retail", 9],
+        ["Jun", "Japan/South Korea", "Retail", 6],
+        ["Jun", "Others", "Retail", 7],
+        // add B2B, SaaS, Cybersec, FMCG small contributions for realism
+        ["Jun", "Europe", "B2B", 7],
+        ["Jun", "North America", "B2B", 9],
+        ["Jun", "Greater China", "B2B", 4],
+        ["Jun", "Latin America", "B2B", 2],
+        ["Jun", "Japan/South Korea", "B2B", 1],
+        ["Jun", "Others", "B2B", 2],
+        ["Jun", "Europe", "SaaS", 4],
+        ["Jun", "North America", "SaaS", 5],
+        ["Jun", "Greater China", "SaaS", 3],
+        ["Jun", "Latin America", "SaaS", 2],
+        ["Jun", "Japan/South Korea", "SaaS", 1],
+        ["Jun", "Others", "SaaS", 1],
+        ["Jun", "Europe", "Cybersec", 3],
+        ["Jun", "North America", "Cybersec", 4],
+        ["Jun", "Greater China", "Cybersec", 2],
+        ["Jun", "Latin America", "Cybersec", 1],
+        ["Jun", "Japan/South Korea", "Cybersec", 0.5],
+        ["Jun", "Others", "Cybersec", 1],
+        ["Jun", "Europe", "FMCG", 2],
+        ["Jun", "North America", "FMCG", 2],
+        ["Jun", "Greater China", "FMCG", 1],
+        ["Jun", "Latin America", "FMCG", 1],
+        ["Jun", "Japan/South Korea", "FMCG", 0.5],
+        ["Jun", "Others", "FMCG", 0.5],
+      ];
+      const MONTHS = [
+        "Jan",
+        "Feb",
+        "Mar",
+        "Apr",
+        "May",
+        "Jun",
+        "Jul",
+        "Aug",
+        "Sep",
+        "Oct",
+        "Nov",
+        "Dec",
+      ];
+      const REGIONS = [
+        "Europe",
+        "North America",
+        "Greater China",
+        "Latin America",
+        "Japan/South Korea",
+        "Others",
+      ];
+      const SEGMENTS = ["Retail", "B2B", "SaaS", "Cybersec", "FMCG"];
+
+      function filterSales(month = "All", region = "All", segment = "All") {
+        return SALES.filter(
+          (r) =>
+            (month === "All" || r[0] === month) &&
+            (region === "All" || r[1] === region) &&
+            (segment === "All" || r[2] === segment)
+        );
+      }
+      function aggByMonth(rows) {
+        const mm = {};
+        MONTHS.slice(0, 6).forEach((m) => (mm[m] = 0));
+        rows.forEach(([m, , , v]) => {
+          if (mm[m] != null) mm[m] += v;
+        });
+        return mm;
+      }
+      function aggByRegion(rows) {
+        const rr = Object.fromEntries(REGIONS.map((r) => [r, 0]));
+        rows.forEach(([, r, , v]) => {
+          if (rr[r] != null) rr[r] += v;
+        });
+        return rr;
+      }
+      function mixShare() {
+        // Aesthetic product mix
+        return {
+          Retail: 30,
+          B2B: 25,
+          SaaS: 20,
+          "Cybersec Products": 15,
+          FMCG: 10,
+        };
+      }
+
+      // ---------- Charts ----------
+      const labelColor = "#e8edf5";
+      const gridColor = "rgba(255,255,255,.15)";
+
+      // Revenue Trend
+      const ctxRev = document.getElementById("chartRevenue");
+      const revBase = aggByMonth(filterSales());
+      const revChart = new Chart(ctxRev, {
+        type: "line",
+        data: {
+          labels: Object.keys(revBase),
+          datasets: [
+            {
+              label: "Revenue (NPR M)",
+              data: Object.values(revBase),
+              borderColor: "#38bdf8",
+              backgroundColor: "rgba(56,189,248,.25)",
+              fill: true,
+              tension: 0.35,
+            },
+          ],
+        },
+        options: {
+          scales: {
+            x: { ticks: { color: labelColor }, grid: { color: gridColor } },
+            y: { ticks: { color: labelColor }, grid: { color: gridColor } },
+          },
+          plugins: { legend: { labels: { color: labelColor } } },
+        },
+      });
+
+      // Product Mix
+      const ctxMix = document.getElementById("chartMix");
+      const mix = mixShare();
+      new Chart(ctxMix, {
+        type: "doughnut",
+        data: {
+          labels: Object.keys(mix),
+          datasets: [
+            {
+              data: Object.values(mix),
+              backgroundColor: [
+                "#60a5fa",
+                "#a78bfa",
+                "#22d3ee",
+                "#34d399",
+                "#f59e0b",
+              ],
+            },
+          ],
+        },
+        options: { plugins: { legend: { labels: { color: labelColor } } } },
+      });
+
+      // Region Share (Adidas-like fallback)
+      const ctxRegion = document.getElementById("chartRegion");
+      const regionChart = new Chart(ctxRegion, {
+        type: "pie",
+        data: {
+          labels: REGIONS,
+          datasets: [
+            {
+              data: [32, 22, 15, 12, 6, 13],
+              backgroundColor: [
+                "#60a5fa",
+                "#a78bfa",
+                "#22d3ee",
+                "#34d399",
+                "#f59e0b",
+                "#f472b6",
+              ],
+            },
+          ],
+        },
+        options: { plugins: { legend: { labels: { color: labelColor } } } },
+      });
+
+      // Funnel (Leads → Won)
+      const ctxFunnel = document.getElementById("chartFunnel");
+      new Chart(ctxFunnel, {
+        type: "bar",
+        data: {
+          labels: ["Leads", "Qualified", "Proposals", "Negotiation", "Won"],
+          datasets: [
+            {
+              data: [1200, 680, 310, 140, 68],
+              backgroundColor: [
+                "#a78bfa",
+                "#60a5fa",
+                "#22d3ee",
+                "#34d399",
+                "#f59e0b",
+              ],
+            },
+          ],
+        },
+        options: {
+          plugins: { legend: { display: false } },
+          scales: {
+            x: { ticks: { color: labelColor }, grid: { color: gridColor } },
+            y: { ticks: { color: labelColor }, grid: { color: gridColor } },
+          },
+        },
+      });
+
+      // Skills Radar + Bar
+      const skills = {
+        Excel: 95,
+        SQL: 88,
+        Python: 82,
+        "Power BI": 92,
+        Linux: 70,
+        Sales: 85,
+        Communication: 89,
+      };
+      new Chart(document.getElementById("chartSkillsRadar"), {
+        type: "radar",
+        data: {
+          labels: Object.keys(skills),
+          datasets: [
+            {
+              label: "Proficiency %",
+              data: Object.values(skills),
+              borderColor: "#60a5fa",
+              backgroundColor: "rgba(96,165,250,.2)",
+            },
+          ],
+        },
+        options: {
+          plugins: { legend: { labels: { color: labelColor } } },
+          scales: {
+            r: {
+              grid: { color: gridColor },
+              angleLines: { color: gridColor },
+              pointLabels: { color: labelColor },
+              ticks: { display: false },
+            },
+          },
+        },
+      });
+      new Chart(document.getElementById("chartSkillsBar"), {
+        type: "bar",
+        data: {
+          labels: Object.keys(skills),
+          datasets: [
+            { data: Object.values(skills), backgroundColor: "#34d399" },
+          ],
+        },
+        options: {
+          indexAxis: "y",
+          plugins: { legend: { display: false } },
+          scales: {
+            x: { ticks: { color: labelColor }, grid: { color: gridColor } },
+            y: { ticks: { color: labelColor }, grid: { color: gridColor } },
+          },
+        },
+      });
+
+      // Experience Gantt (Excel vibe)
+      // Bars sized by years in role; aligned oldest→latest
+      const roles = [
+        { label: "Hardware Engineer", y: 2, color: "#60a5fa" },
+        { label: "Network Engineer", y: 1, color: "#34d399" },
+        { label: "IT Support Engineer", y: 1, color: "#a78bfa" },
+        { label: "B2B Product Specialist | Analyst", y: 1, color: "#f59e0b" },
+        { label: "Sales Analyst", y: 3, color: "#f472b6" },
+      ];
+      new Chart(document.getElementById("chartGantt"), {
+        type: "bar",
+        data: {
+          labels: roles.map((r) => r.label),
+          datasets: [
+            {
+              data: roles.map((r) => r.y),
+              backgroundColor: roles.map((r) => r.color),
+            },
+          ],
+        },
+        options: {
+          indexAxis: "y",
+          plugins: { legend: { display: false } },
+          scales: {
+            x: { ticks: { color: labelColor }, grid: { color: gridColor } },
+            y: { ticks: { color: labelColor }, grid: { color: gridColor } },
+          },
+        },
+      });
+
+      // ---------- Slicers Wiring ----------
+      const slicerMonth = document.getElementById("slicerMonth");
+      const slicerRegion = document.getElementById("slicerRegion");
+      const slicerSegment = document.getElementById("slicerSegment");
+      const revLabel = document.getElementById("revFilterLabel");
+      const kpiTopRegion = document.getElementById("kpiTopRegion");
+
+      function refreshOverview() {
+        const m = slicerMonth.value,
+          r = slicerRegion.value,
+          s = slicerSegment.value;
+        const filtered = filterSales(m, r, s);
+        const byMonth = aggByMonth(filtered);
+        revChart.data.labels = Object.keys(byMonth);
+        revChart.data.datasets[0].data = Object.values(byMonth);
+        revChart.update();
+        revLabel.textContent = `${m} • ${r}${s !== "All" ? " • " + s : ""}`;
+        // Top Region KPI
+        const byReg = aggByRegion(filtered);
+        const top = Object.entries(byReg).sort((a, b) => b[1] - a[1])[0];
+        kpiTopRegion.textContent = top ? top[0] : "—";
+        // Region share chart (still global view but we can optionally refocus)
+        regionChart.data.datasets[0].data = REGIONS.map(
+          (reg) => (byReg[reg] ?? 0) || 0
+        );
+        regionChart.update();
+      }
+      [slicerMonth, slicerRegion, slicerSegment].forEach((sel) =>
+        sel.addEventListener("change", refreshOverview)
+      );
+      refreshOverview();
+
+      // ---------- Live Market APIs ----------
+      async function safeFetch(url, fallback = null) {
+        try {
+          const r = await fetch(url);
+          if (!r.ok) throw new Error("bad");
+          return await r.json();
+        } catch (e) {
+          return fallback;
+        }
+      }
+
+      // Crypto Top 5
+      (async () => {
+        const url =
+          "https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&per_page=5&page=1";
+        const fb = [
+          { name: "Bitcoin", market_cap: 1.2e12 },
+          { name: "Ethereum", market_cap: 4.2e11 },
+          { name: "Tether", market_cap: 1.1e11 },
+          { name: "BNB", market_cap: 9.5e10 },
+          { name: "USDC", market_cap: 8.7e10 },
+        ];
+        const data = await safeFetch(url, fb);
+        document.getElementById("capUpdated").textContent = "Updated";
+        new Chart(document.getElementById("chartCryptoCap"), {
+          type: "bar",
+          data: {
+            labels: data.map((x) => x.name),
+            datasets: [
+              {
+                data: data.map((x) => x.market_cap),
+                backgroundColor: "#f59e0b",
+              },
+            ],
+          },
+          options: {
+            plugins: { legend: { display: false } },
+            scales: {
+              y: {
+                ticks: {
+                  color: labelColor,
+                  callback: (v) => (v / 1e9).toFixed(1) + "B",
+                },
+                grid: { color: gridColor },
+              },
+              x: { ticks: { color: labelColor }, grid: { color: gridColor } },
+            },
+          },
+        });
+      })();
+
+      // BTC 7-day
+      (async () => {
+        const url =
+          "https://api.coingecko.com/api/v3/coins/bitcoin/market_chart?vs_currency=usd&days=7";
+        const fb = {
+          prices: Array.from({ length: 7 }, (_, i) => [
+            Date.now() - (6 - i) * 86400000,
+            65000 + i * 200 - (i % 2) * 300,
+          ]),
+        };
+        const data = await safeFetch(url, fb);
+        const labels = data.prices.map((p) =>
+          new Date(p[0]).toLocaleDateString()
+        );
+        const values = data.prices.map((p) => p[1]);
+        new Chart(document.getElementById("chartBTC"), {
+          type: "line",
+          data: {
+            labels,
+            datasets: [
+              {
+                label: "BTC (USD)",
+                data: values,
+                borderColor: "#a78bfa",
+                backgroundColor: "rgba(167,139,250,.25)",
+                fill: true,
+                tension: 0.35,
+              },
+            ],
+          },
+          options: {
+            plugins: { legend: { labels: { color: labelColor } } },
+            scales: {
+              x: { ticks: { color: labelColor }, grid: { color: gridColor } },
+              y: { ticks: { color: labelColor }, grid: { color: gridColor } },
+            },
+          },
+        });
+      })();
+
+      // Forex USD base
+      (async () => {
+        const url = "https://open.er-api.com/v6/latest/USD";
+        const fb = { rates: { EUR: 0.92, GBP: 0.79, JPY: 157 } };
+        const data = await safeFetch(url, fb);
+        new Chart(document.getElementById("chartForex"), {
+          type: "bar",
+          data: {
+            labels: ["EUR", "GBP", "JPY"],
+            datasets: [
+              {
+                data: [data.rates.EUR, data.rates.GBP, data.rates.JPY],
+                backgroundColor: "#60a5fa",
+              },
+            ],
+          },
+          options: {
+            plugins: { legend: { display: false } },
+            scales: {
+              x: { ticks: { color: labelColor }, grid: { color: gridColor } },
+              y: { ticks: { color: labelColor }, grid: { color: gridColor } },
+            },
+          },
+        });
+      })();
+
+      // ---------- NEPSE (Unofficial) ----------
+      const NEPSE = {
+        gainers: "https://nepseapi.com/api/TopGainers",
+        losers: "https://nepseapi.com/api/TopLosers",
+        turnover: "https://nepseapi.com/api/TopTenTurnoverScrips",
+        brokers: "https://nepseapi.com/api/TopBrokers",
+      };
+      const FALLBACK_NEPSE = {
+        turnover: [
+          "NRIC — NPR 975.18M",
+          "HRL — NPR 859.21M",
+          "SINDU — NPR 400.44M",
+          "LBBL — NPR 173.79M",
+          "KBL — NPR 120.13M",
+          "NMB — NPR 110.22M",
+        ],
+        gainers: [
+          "HDL +10.0% (₨1329.9)",
+          "NLIC +9.5% (₨841.5)",
+          "GMLI +8.2% (₨1142.2)",
+          "NICA +6.8% (₨508.3)",
+        ],
+        losers: [
+          "SAMAJ −10.0% (₨3185.1)",
+          "UHEWA −5.5% (₨939)",
+          "BEDC −3.4% (₨763)",
+          "GBIME −2.1% (₨315)",
+        ],
+        brokers: [
+          "Broker 58 — High turnover",
+          "Broker 49 — Active",
+          "Broker 17 — Active",
+          "Broker 32 — Active",
+        ],
+      };
+      async function getNepse(route) {
+        try {
+          const r = await fetch(route, {
+            headers: { accept: "application/json" },
+          });
+          if (!r.ok) throw new Error("bad");
+          const j = await r.json();
+          return Array.isArray(j) ? j : j?.data || [];
+        } catch (e) {
+          return null;
+        }
+      }
+      async function loadNepse(tab) {
+        const list = document.getElementById("nepseList");
+        list.innerHTML = '<div class="text-slate-400">Loading…</div>';
+        let arr = null;
+        if (tab === "turnover") arr = await getNepse(NEPSE.turnover);
+        if (tab === "gainers") arr = await getNepse(NEPSE.gainers);
+        if (tab === "losers") arr = await getNepse(NEPSE.losers);
+        if (tab === "brokers") arr = await getNepse(NEPSE.brokers);
+        let items = [];
+        if (arr && arr.length) {
+          items = arr.slice(0, 12).map((d) => {
+            if (tab === "brokers")
+              return `${
+                d.broker || d.brokerName || d.name || "Broker"
+              } — NPR ${(d.turnover || d.totalTurnover || 0).toLocaleString()}`;
+            if (tab === "turnover")
+              return `${d.symbol || d.SYMBOL || d.company || d.scrip}: NPR ${(
+                d.turnover ||
+                d.TURNOVER ||
+                d.value ||
+                d.totalTurnover ||
+                0
+              ).toLocaleString()}`;
+            if (tab === "gainers")
+              return `${d.symbol || d.SYMBOL || d.company || d.scrip}: +${
+                d.change || d.PERCENT_CHANGE || d.percent || d.chng || 0
+              }%`;
+            if (tab === "losers")
+              return `${d.symbol || d.SYMBOL || d.company || d.scrip}: ${
+                d.change || d.PERCENT_CHANGE || d.percent || d.chng || 0
+              }%`;
+            return JSON.stringify(d);
+          });
+        } else {
+          items = FALLBACK_NEPSE[tab] || [];
+        }
+        list.innerHTML = items
+          .map((t) => `<div class="glass card p-3 text-sm">${t}</div>`)
+          .join("");
+      }
+      const tabs = Array.from(document.querySelectorAll(".tab"));
+      tabs.forEach((btn) =>
+        btn.addEventListener("click", () => {
+          tabs.forEach((x) => x.classList.remove("ring-2", "ring-violet-300"));
+          btn.classList.add("ring-2", "ring-violet-300");
+          loadNepse(btn.dataset.tab);
+        })
+      );
+      // init
+      tabs[0].click();
+
+      // Footer year
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>
